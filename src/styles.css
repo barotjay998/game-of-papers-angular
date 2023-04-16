@@ -33,6 +33,21 @@
     font-family: Consolas, monospace;
 }
 
+.ag-theme-alpine .ag-header {
+    font-family: Consolas, monospace;
+}
+
+.ag-theme-alpine {
+    --ag-header-height: 3rem;
+}
+
+.grid-font {
+    font-size: 1rem;
+    font-style: oblique;
+    letter-spacing: 0.016rem;
+    font-weight: 500;
+}
+
 .conf-content {
     background-color: #161b22;
 }

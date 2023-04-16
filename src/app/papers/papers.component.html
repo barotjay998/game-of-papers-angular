@@ -109,20 +109,12 @@
     <div class="row">
         <!-- Heading -->
         <div class="col-md-12">
-            <h1 class="font-consolas"> Papers </h1>
-        </div> 
-
-        <div class="col-lg-4 mt-2 mb-2">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">PDF Sample 1</h5>
-                <p class="card-text">This is a sample PDF document.</p>
-                <a href="path/to/pdf/sample1.pdf" class="btn btn-sm btn-secondary mt-1" style="width:80%">View PDF</a>
-                <a href="path/to/pdf/sample1.pdf" class="btn btn-sm btn-warning mt-1" style="width:80%"> Recommend </a>
-            </div>
-            </div>
-        </div>
-        
+            <h1 class="font-consolas"> Directory </h1>
+            <p style="font-weight: 100;"> Utilize the tools 
+                <i class="fa-solid fa-bars pr-1 pl-1" style="font-size: 0.8rem;"></i> 
+                to start searching and applying filters, you can also sort by clicking on the column.
+            </p>
+        </div>         
     </div>
 
   <div>
@@ -133,6 +125,7 @@
         [rowData]="rowData"
         [columnDefs]="columnDefs"
         [animateRows]="true"
+        [gridOptions]="gridOptions"
     >
     </ag-grid-angular>
 </div>

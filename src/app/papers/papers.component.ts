@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { PapersService } from '../services/papers.service';
 import { error } from 'console';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { AgRowComponent } from '../ag-row/ag-row.component';
 import { AgGridAngular } from 'ag-grid-angular';
@@ -21,29 +21,34 @@ export class PapersComponent implements OnInit {
       field: 'title', 
       sortable: true, 
       filter: true,
-      flex: 4,
-      resizable: true
-    },
-    {
-      headerName: 'View',
-      field: 'title', 
-      sortable: true, 
-      filter: true,
+      flex: 1,
+      resizable: true,
       cellRenderer: AgRowComponent,
       cellRendererParams: {},
-      flex: 1,
-      resizable: true
+      autoHeight: true
     },
-    {
-      headerName: 'Recommend',
-      field: 'title', 
-      sortable: true, 
-      filter: true,
-      cellRenderer: AgRowComponent,
-      cellRendererParams: {},
-      flex: 1,
-      resizable: true
-    }
+
+    // Uncomment the following to add a seprate column for each button
+    // {
+    //   headerName: '',
+    //   field: 'title', 
+    //   sortable: true, 
+    //   filter: true,
+    //   cellRenderer: AgRowComponent,
+    //   cellRendererParams: {btnName: 'View'},
+    //   flex: 1,
+    //   resizable: true
+    // },
+    // {
+    //   headerName: '',
+    //   field: 'title', 
+    //   sortable: true, 
+    //   filter: true,
+    //   cellRenderer: AgRowComponent,
+    //   cellRendererParams: {btnName: "Recommend"},
+    //   flex: 1,
+    //   resizable: true
+    // }
 
   ];
 
@@ -51,6 +56,11 @@ export class PapersComponent implements OnInit {
     sortable: true, filter: true
   };
 
+  gridOptions: GridOptions = {
+    // other grid options...
+    suppressMenuHide: true
+  };
+  
   rowData = []
 
   ngOnInit(): void {

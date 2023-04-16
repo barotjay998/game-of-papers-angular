@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.bg-black-pearl {
+    background-color: #161b22;
+}
+
+.font-consolas {
+    font-family: Consolas, monospace;
+}
+
+.conf-content {
+    background-color: #161b22;
+}
+
+.login-bg {
+    background-color: #33383e;
+}

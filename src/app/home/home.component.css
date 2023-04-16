@@ -1,0 +1,22 @@
+.btn-explore {
+    padding: 8px 25px;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #999;
+  }
+  
+.btn-explore:hover {
+  background-color: #deaa0e;
+  text-decoration: none;
+}
+
+.btn-explore:active {
+  background-color: #deaa0e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

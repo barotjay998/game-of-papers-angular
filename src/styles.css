@@ -4,14 +4,32 @@
     background-color: #161b22;
 }
 
+.bg-onyx {
+    background-color: #33383e;
+}
+
+.pagenotfound {
+    color: white;
+    background-color: #ffc107;
+    border-radius: 5px;
+    border-style: double;
+    font-size: 2rem;
+}
+
+.pagenotfound-bg {
+    position: fixed; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url(assets/images/pagenotfound.gif);
+    background-size: cover;
+    background-position: center;
+}
+
 .font-consolas {
     font-family: Consolas, monospace;
 }
 
 .conf-content {
     background-color: #161b22;
-}
-
-.login-bg {
-    background-color: #33383e;
 }

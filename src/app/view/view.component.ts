@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { PapersService } from '../services/papers.service';
 import { saveAs } from 'file-saver'; 
 import { Router } from '@angular/router';
@@ -14,6 +14,7 @@ import { AgRecRowComponent } from '../ag-rec-row/ag-rec-row.component';
 export class ViewComponent implements OnInit {
 
   public paperId: number = 0
+  public isRecommend: boolean = false
   public data: any
   public rowData: any
 
@@ -24,10 +25,21 @@ export class ViewComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    let id = parseInt(this.route.snapshot.paramMap.get('id') || '0')
-    this.paperId = id
+    // Snapshot approach
+    // let id = parseInt(this.route.snapshot.paramMap.get('id') || '0')
+    // this.paperId = id
+
+    // Subscribe approach, this is needed when the component is reused
+    // and we need to update the data when the route changes
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      let id = parseInt(params.get('id') || '0')
+      let isRecommend = params.get('recommend') || 'false'
+      this.paperId = id
+      this.isRecommend = isRecommend === 'true'
+      
+      this.loadData()
+    });
     
-    this.loadData()
   }
 
   loadData() {

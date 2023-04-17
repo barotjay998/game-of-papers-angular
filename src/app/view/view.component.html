@@ -1,16 +1,16 @@
 <div class="container-fluid font-consolas pb-3">
     <div class="row mt-3">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <a (click)="onBack($event)" class="btn btn-sm btn-secondary w-75 font-consolas"
             style="color: white;"> 
                 <i class="fa fa-chevron-left"></i> 
-                Back 
+                Back To Directory
             </a>
         </div>
     </div>
 </div>
 
-<div class="container font-consolas">
+<div *ngIf="!isRecommend" class="container font-consolas">
     <div class="row">
         <div class="col-md-12">
             <p> Published: {{ this.data.paper_published_at }} </p>
@@ -61,14 +61,15 @@
         </div>
     </div>
 
+</div>
+
+<div class="container font-consolas">
     <div class="row mt-5" style="font-size: larger; font-weight: lighter;">
         <div class="col-md-12">
             <p class="mt-0 mb-1"> Recommendations </p>
         </div>
     </div>
-
 </div>
-
 
 <div class="ag-theme-alpine" 
      style="margin-bottom: 8rem; 

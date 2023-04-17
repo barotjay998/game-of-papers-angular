@@ -37,7 +37,7 @@ export class AgRowComponent implements OnInit, ICellRendererAngularComp {
   }
 
   onRecommend( params: any ) {
-    console.log(`Recommend: ${this.params.data.id}`)
+    this.router.navigate(['/papers', this.params.data.id, {recommend: true}])
   }
 
 }

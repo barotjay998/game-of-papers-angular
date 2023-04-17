@@ -19,7 +19,7 @@ import { AgRecRowComponent } from './ag-rec-row/ag-rec-row.component';
     routingComponents,
     AgRowComponent,
     ViewComponent,
-    AgRecRowComponent,
+    AgRecRowComponent
   ],
   imports: [
     BrowserModule,

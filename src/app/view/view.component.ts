@@ -105,7 +105,7 @@ export class ViewComponent implements OnInit {
     },
     { 
       headerName: 'Summary',
-      field: 'summary',
+      field: 'Summary',
       sortable: true, 
       filter: true,
       flex: 6,

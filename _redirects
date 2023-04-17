@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/v1/api/papers"
+  to = "http://129.114.27.48/v1/api/papers"
+  status = 200

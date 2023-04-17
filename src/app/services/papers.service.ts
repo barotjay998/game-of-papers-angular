@@ -19,7 +19,7 @@ export class PapersService {
       var url = `${environment.api_url}/papers?start=${start}&end=${end}`;
     }
 
-    return this.http.get(url, {headers: {'Access-Control-Allow-Origin': '*'}})
+    return this.http.get(url)
       .pipe(catchError(this.handleError));
   }
 

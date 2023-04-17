@@ -15,6 +15,8 @@ export class ViewComponent implements OnInit {
 
   public paperId: number = 0
   public isRecommend: boolean = false
+  public showRecommend: boolean = false
+  public toggleRecommendBtnText: string = "Get Recommendations"
   public data: any
   public rowData: any
 
@@ -36,7 +38,7 @@ export class ViewComponent implements OnInit {
       let isRecommend = params.get('recommend') || 'false'
       this.paperId = id
       this.isRecommend = isRecommend === 'true'
-      
+      this.showRecommend = false
       this.loadData()
     });
     
@@ -81,6 +83,16 @@ export class ViewComponent implements OnInit {
 
   onDownload(event: any) {
     this.loadPdf()
+  }
+
+  toggleShowRecommend(event: any){
+    this.showRecommend = !this.showRecommend
+
+    if (this.showRecommend) {
+      this.toggleRecommendBtnText = "Hide Recommendations"
+    } else {
+      this.toggleRecommendBtnText = "Get Recommendations"
+    }
   }
 
   columnDefs: ColDef[] = [

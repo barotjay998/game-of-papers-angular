@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="row justify-content-center mt-3">
+    <div class="row justify-content-center mt-3 mb-3">
         <div class="col-md-3 text-center">
             <a class="btn-explore" (click)="onDownload($event)"> 
                 Download
@@ -61,17 +61,29 @@
         </div>
     </div>
 
+    <div class="row" [ngClass]="{'margin-bottom-5': !isRecommend}">
+        <div class="col-md-3 text-center">
+            <a class="btn btn-warning btn-sm" (click)="toggleShowRecommend($event)"> 
+                {{ toggleRecommendBtnText }}
+                <i *ngIf="!showRecommend; else elseBlock" class="fa fa-angle-double-right" aria-hidden="true"></i>
+                <ng-template #elseBlock>
+                    <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+                </ng-template>
+            </a>
+        </div>
+    </div>
+
 </div>
 
-<div class="container font-consolas">
-    <div class="row mt-5" style="font-size: larger; font-weight: lighter;">
+<div *ngIf="isRecommend || showRecommend " class="container font-consolas">
+    <div class="row" style="font-size: larger; font-weight: lighter;">
         <div class="col-md-12">
             <p class="mt-0 mb-1"> Recommendations </p>
         </div>
     </div>
 </div>
 
-<div class="ag-theme-alpine" 
+<div *ngIf="isRecommend || showRecommend" class="ag-theme-alpine" 
      style="margin-bottom: 8rem; 
             margin-top: 0; 
             margin-right: 8rem; 

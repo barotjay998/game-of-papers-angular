@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgRowComponent } from './ag-row/ag-row.component';
 import { ViewComponent } from './view/view.component';
+import { AgRecRowComponent } from './ag-rec-row/ag-rec-row.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ViewComponent } from './view/view.component';
     routingComponents,
     AgRowComponent,
     ViewComponent,
+    AgRecRowComponent,
   ],
   imports: [
     BrowserModule,

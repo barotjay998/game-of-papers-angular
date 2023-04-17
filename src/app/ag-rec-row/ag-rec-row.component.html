@@ -1,0 +1,20 @@
+<div class="container font-consolas">
+    <div class="row"
+    style="padding: 1rem;">
+        <div class="col-lg-12">
+            <p class="mt-0 mb-0" 
+            style="font-size: inherit;line-height: 1.4rem; font-weight: bold;">
+             {{ this.params.value }} 
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-3 text-center mb-2">
+        <a (click)="onView(this.params)"
+        class="btn btn-sm btn-secondary w-75 font-consolas"
+        style="color: white;">
+            View <i class="fa-solid fa-eye" style="color: white"></i> 
+        </a>
+    </div>
+
+</div>

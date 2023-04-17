@@ -16,28 +16,24 @@ export class PapersComponent implements OnInit {
   constructor(private paperService: PapersService) { }
 
   columnDefs: ColDef[] = [
+    {
+      headerName: 'Conference',
+      field: 'conference', 
+      sortable: true, 
+      filter: true,
+      flex: 2,
+      resizable: true
+    },
     { 
       headerName: 'Title',
       field: 'title', 
       sortable: true, 
       filter: true,
-      flex: 1,
+      flex: 8,
       resizable: true,
       cellRenderer: AgRowComponent,
       autoHeight: true
-    },
-
-    // Uncomment the following to add a seprate column for each button
-    // {
-    //   headerName: '',
-    //   field: 'title', 
-    //   sortable: true, 
-    //   filter: true,
-    //   cellRenderer: AgRowComponent,
-    //   cellRendererParams: {btnName: 'View'},
-    //   flex: 1,
-    //   resizable: true
-    // },
+    }
     // {
     //   headerName: '',
     //   field: 'title', 

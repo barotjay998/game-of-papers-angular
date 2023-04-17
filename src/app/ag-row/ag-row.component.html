@@ -5,16 +5,20 @@
             <p class="mt-0 mb-0 grid-font"> {{ this.params.value }} </p>
         </div>
 
-        <div class="col-lg-2">
+        <div class="col-xl-2">
             <a (click)="onView(this.params)" 
-            class="btn btn-sm btn-secondary w-75 font-consolas"
-            style="color: white;">
+            class="btn btn-sm btn-secondary font-consolas"
+            style="color: white; width: 7rem;">
                 View <i class="fa-solid fa-eye" style="color: white"></i> 
             </a>
         </div>
-        <div class="col-lg-2">
-            <a (click)="onRecommend(this.params)" class="btn btn-sm btn-warning w-75 font-consolas"> 
-                Recommend <i class="fa fa-arrow-circle-right"></i> 
+
+        <div class="col-xl-2">
+            <a (click)="onRecommend(this.params)"
+            class="btn btn-sm btn-warning font-consolas"
+            style="color: white; width: 7rem;">
+                Recommend
+                <i class="fa fa-angle-double-right" style="color: white"></i> 
             </a>
         </div>
         

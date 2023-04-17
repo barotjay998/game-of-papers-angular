@@ -24,7 +24,6 @@ export class PapersComponent implements OnInit {
       flex: 1,
       resizable: true,
       cellRenderer: AgRowComponent,
-      cellRendererParams: {},
       autoHeight: true
     },
 
@@ -65,8 +64,8 @@ export class PapersComponent implements OnInit {
 
   ngOnInit(): void {
     this.paperService.getPapers().subscribe ( 
-      data => {console.log(data); this.rowData = data;},
-      error => {console.log("Error:", error);}
+      data => {this.rowData = data;},
+      error => {console.log("Get Papers Error:", error);}
     );
   }
 

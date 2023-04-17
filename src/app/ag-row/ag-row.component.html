@@ -6,10 +6,16 @@
         </div>
 
         <div class="col-lg-2">
-            <a href="path/to/pdf/sample1.pdf" class="btn btn-sm btn-secondary w-75 font-consolas">View PDF <i class="fa-solid fa-eye"></i> </a>
+            <a (click)="onView(this.params)" 
+            class="btn btn-sm btn-secondary w-75 font-consolas"
+            style="color: white;">
+                View <i class="fa-solid fa-eye" style="color: white"></i> 
+            </a>
         </div>
         <div class="col-lg-2">
-            <a href="path/to/pdf/sample1.pdf" class="btn btn-sm btn-warning w-75 font-consolas"> Recommend <i class="fa fa-arrow-circle-right" style="color: white"></i> </a>
+            <a (click)="onRecommend(this.params)" class="btn btn-sm btn-warning w-75 font-consolas"> 
+                Recommend <i class="fa fa-arrow-circle-right"></i> 
+            </a>
         </div>
         
     </div>

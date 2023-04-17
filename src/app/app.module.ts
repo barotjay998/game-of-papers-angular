@@ -8,6 +8,7 @@ import { PapersService } from './services/papers.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { AgRowComponent } from './ag-row/ag-row.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AgRowComponent } from './ag-row/ag-row.component';
     FooterComponent,
     routingComponents,
     AgRowComponent,
+    ViewComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,22 +11,22 @@ export class PapersService {
 
   private test_url: string = "/assets/testdata/testpapers.json"
 
-  // getPapers(start: number = 0, end: number = 0): Observable<any>  {
+  getPapers(start: number = 0, end: number = 0): Observable<any>  {
 
-  //   if (start == 0 && end == 0) {
-  //     var url = `${environment.api_url}/papers`;
-  //   } else {
-  //     var url = `${environment.api_url}/papers?start=${start}&end=${end}`;
-  //   }
+    if (start == 0 && end == 0) {
+      var url = `${environment.api_url}/papers`;
+    } else {
+      var url = `${environment.api_url}/papers?start=${start}&end=${end}`;
+    }
 
-  //   return this.http.get(url)
-  //     .pipe(catchError(this.handleError));
-  // }
-
-  getPapers(): Observable<any>  {
-    return this.http.get(this.test_url)
+    return this.http.get(url)
       .pipe(catchError(this.handleError));
   }
+
+  // getPapers(): Observable<any>  {
+  //   return this.http.get(this.test_url)
+  //     .pipe(catchError(this.handleError));
+  // }
 
   getPaper(id: number): Observable<any>  {
     var url = `${environment.api_url}/papers/${id}`;

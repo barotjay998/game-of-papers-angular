@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     const { sampleFrom, sampleTo } = this.getSampleRange(0, 1000, 5);
 
     this.paperService.getPapers(sampleFrom, sampleTo).subscribe ( 
-      data => {this.data = data;},
+      data => {this.data = data; console.log("Get Papers:", data);},
       error => {console.log("Get Papers Error:", error);}
     );
 
@@ -40,12 +40,10 @@ export class HomeComponent implements OnInit {
   }
 
   onView(id: number) {
-    console.log("View Paper:", id);
     this.router.navigate(['/papers', id])
   }
 
   onRecommend(id: number) {
-    console.log("Recommend Paper:", id);
     this.router.navigate(['/papers', id, {recommend: true}])
   }
 

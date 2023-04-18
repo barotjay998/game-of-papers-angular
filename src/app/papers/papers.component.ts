@@ -96,7 +96,6 @@ export class PapersComponent implements OnInit {
   }
 
   onChange() {
-    console.log('Input value changed:', this.itemsPerPage);
     this.pageSizeTo = this.pageSizeFrom + this.itemsPerPage;
     this.loadPapers(this.pageSizeFrom, this.pageSizeTo);
     // do something with the new value

@@ -47,7 +47,6 @@ export class ViewComponent implements OnInit {
   loadData() {
     this.paperService.getPaper(this.paperId).subscribe ( 
       data => {
-        console.log(data); 
         this.data = data;
 
         data.recommendations = data.recommendations.map((rec: any, index: any) => {

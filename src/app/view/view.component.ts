@@ -16,7 +16,7 @@ export class ViewComponent implements OnInit {
   public paperId: number = 0
   public isRecommend: boolean = false
   public showRecommend: boolean = true
-  public toggleRecommendBtnText: string = "Show Recommendations"
+  public toggleRecommendBtnText: string = "Hide Recommendations"
   public data: any
   public rowData: any
 

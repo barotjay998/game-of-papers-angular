@@ -15,7 +15,7 @@ export class ViewComponent implements OnInit {
 
   public paperId: number = 0
   public isRecommend: boolean = false
-  public showRecommend: boolean = false
+  public showRecommend: boolean = true
   public toggleRecommendBtnText: string = "Show Recommendations"
   public data: any
   public rowData: any
@@ -38,7 +38,7 @@ export class ViewComponent implements OnInit {
       let isRecommend = params.get('recommend') || 'false'
       this.paperId = id
       this.isRecommend = isRecommend === 'true'
-      this.showRecommend = false
+      this.showRecommend = true
       this.loadData()
     });
     

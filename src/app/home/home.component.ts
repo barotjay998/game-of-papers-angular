@@ -25,7 +25,13 @@ export class HomeComponent implements OnInit {
     const { sampleFrom, sampleTo } = this.getSampleRange(0, 1000, 5);
 
     this.paperService.getPapers(sampleFrom, sampleTo).subscribe ( 
-      data => {this.data = data;},
+      data => {
+        this.data = data;
+        if (this.data.length == 0) {
+          this.loadFeaturedPapers();
+        }
+
+      },
       error => {console.log("Get Papers Error:", error);}
     );
 

@@ -1,20 +1,34 @@
 <div class="container font-consolas">
-    <div class="row"
-    style="padding: 1rem;">
-        <div class="col-lg-12">
+
+    <div class="row" style="padding: 1rem;">
+        <div class="col-lg-12" [class.text-truncate]="!isShowMore">
             <p class="mt-0 mb-0" 
             style="font-size: inherit;line-height: 1.4rem; font-weight: bold;">
-             {{ this.params.value }} 
+             {{ this.params.data.summary }} 
             </p>
         </div>
     </div>
 
-    <div class="col-lg-3 text-center mb-2">
-        <a (click)="onView(this.params)"
-        class="btn btn-sm btn-secondary w-75 font-consolas"
-        style="color: white;">
-            View <i class="fa-solid fa-eye" style="color: white"></i> 
-        </a>
+    <div class="row text-left font-consolas">
+
+        <div class="col-lg-12 mb-2">
+            <a (click)="onShowMore(this.params)"
+            class="btn btn-sm btn-warning mr-1"
+            style="width: 7rem;">
+            {{ isShowMore ? 'Show Less' : 'Show More' }}
+
+            <i class="fa fa-angle-double-down" [class.fa-angle-double-up]="isShowMore"></i>
+
+            </a>
+
+            <a (click)="onView(this.params)"
+            class="btn btn-sm btn-secondary mr-1"
+            style="color: white; width: 7rem;">
+                View <i class="fa-solid fa-eye" style="color: white"></i> 
+            </a>
+
+        </div>
+
     </div>
 
 </div>

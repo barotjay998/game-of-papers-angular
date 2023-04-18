@@ -13,6 +13,10 @@ import { AgGridAngular } from 'ag-grid-angular';
 })
 export class PapersComponent implements OnInit {
 
+  public itemsPerPage = 20;
+  public pageSizeTo = 20;
+  public pageSizeFrom = 0;
+
   constructor(private paperService: PapersService) { }
 
   columnDefs: ColDef[] = [
@@ -22,7 +26,10 @@ export class PapersComponent implements OnInit {
       sortable: true, 
       filter: true,
       flex: 2,
-      resizable: true
+      resizable: true,
+      cellRenderer: (params: any) => {
+        return `<div class="font-consolas text-center" style="font-size: large">${params.value}</div>`;
+      },
     },
     { 
       headerName: 'Title',
@@ -32,19 +39,10 @@ export class PapersComponent implements OnInit {
       flex: 8,
       resizable: true,
       cellRenderer: AgRowComponent,
+      // Pass additional parameters to the cellRenderer
+      // cellRendererParams: {arg1: "val1"},
       autoHeight: true
     }
-    // {
-    //   headerName: '',
-    //   field: 'title', 
-    //   sortable: true, 
-    //   filter: true,
-    //   cellRenderer: AgRowComponent,
-    //   cellRendererParams: {btnName: "Recommend"},
-    //   flex: 1,
-    //   resizable: true
-    // }
-
   ];
 
   defaultColDef = {
@@ -59,10 +57,45 @@ export class PapersComponent implements OnInit {
   rowData = []
 
   ngOnInit(): void {
-    this.paperService.getPapers().subscribe ( 
+    this.loadPapers();
+
+  }
+
+  loadPapers(from: number = 0, to: number = 20, ) {
+    this.paperService.getPapers(from, to - 1).subscribe ( 
       data => {this.rowData = data;},
       error => {console.log("Get Papers Error:", error);}
     );
+  }
+
+  onNext() {
+    this.pageSizeFrom += this.itemsPerPage
+    this.pageSizeTo += this.itemsPerPage
+    this.loadPapers(this.pageSizeFrom, this.pageSizeTo);
+  }
+
+  onPrevious() {
+
+    // Prevent negative page size
+    if (this.pageSizeFrom - this.itemsPerPage < 0) {
+      this.pageSizeFrom = 0;
+      this.pageSizeTo = this.itemsPerPage;
+      this.loadPapers(this.pageSizeFrom, this.pageSizeTo);
+      return;
+
+    } else {
+      this.pageSizeTo -= this.itemsPerPage
+      this.pageSizeFrom -= this.itemsPerPage
+      this.loadPapers(this.pageSizeFrom, this.pageSizeTo);
+    }
+
+  }
+
+  onChange() {
+    console.log('Input value changed:', this.itemsPerPage);
+    this.pageSizeTo = this.pageSizeFrom + this.itemsPerPage;
+    this.loadPapers(this.pageSizeFrom, this.pageSizeTo);
+    // do something with the new value
   }
 
 }

@@ -10,6 +10,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { AgRowComponent } from './ag-row/ag-row.component';
 import { ViewComponent } from './view/view.component';
 import { AgRecRowComponent } from './ag-rec-row/ag-rec-row.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AgRecRowComponent } from './ag-rec-row/ag-rec-row.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AgGridModule
+    AgGridModule,
+    FormsModule
   ],
   providers: [PapersService],
   bootstrap: [AppComponent]

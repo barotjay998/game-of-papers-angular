@@ -16,7 +16,7 @@ export class ViewComponent implements OnInit {
   public paperId: number = 0
   public isRecommend: boolean = false
   public showRecommend: boolean = false
-  public toggleRecommendBtnText: string = "Get Recommendations"
+  public toggleRecommendBtnText: string = "Show Recommendations"
   public data: any
   public rowData: any
 
@@ -91,7 +91,7 @@ export class ViewComponent implements OnInit {
     if (this.showRecommend) {
       this.toggleRecommendBtnText = "Hide Recommendations"
     } else {
-      this.toggleRecommendBtnText = "Get Recommendations"
+      this.toggleRecommendBtnText = "Show Recommendations"
     }
   }
 

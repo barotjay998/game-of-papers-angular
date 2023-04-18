@@ -19,14 +19,9 @@ export class PapersService {
       var url = `${environment.api_url}/papers?start=${start}&end=${end}`;
     }
 
-    return this.http.get(url, {headers: {'Access-Control-Allow-Origin': '*'}})
+    return this.http.get(url)
       .pipe(catchError(this.handleError));
   }
-
-  // getPapers(): Observable<any>  {
-  //   return this.http.get(this.test_url)
-  //     .pipe(catchError(this.handleError));
-  // }
 
   getPaper(id: number): Observable<any>  {
     var url = `${environment.api_url}/papers/${id}`;

@@ -9,6 +9,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AgRecRowComponent implements OnInit, ICellRendererAngularComp {
 
+  public isShowMore: boolean = false;
+
   public params: any;
   
   constructor(
@@ -31,6 +33,10 @@ export class AgRecRowComponent implements OnInit, ICellRendererAngularComp {
 
   onView( params: any ) {    
     this.router.navigate(['/papers', this.params.data.id])
+  }
+
+  onShowMore( params: any ) {
+    this.isShowMore = !this.isShowMore;
   }
 
 }

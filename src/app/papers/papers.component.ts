@@ -5,6 +5,7 @@ import { ColDef, GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { AgRowComponent } from '../ag-row/ag-row.component';
 import { AgGridAngular } from 'ag-grid-angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-papers',
@@ -17,7 +18,10 @@ export class PapersComponent implements OnInit {
   public pageSizeTo = 20;
   public pageSizeFrom = 0;
 
-  constructor(private paperService: PapersService) { }
+  constructor(
+    private paperService: PapersService,
+    private router: Router
+    ) { }
 
   columnDefs: ColDef[] = [
     {
@@ -96,6 +100,10 @@ export class PapersComponent implements OnInit {
     this.pageSizeTo = this.pageSizeFrom + this.itemsPerPage;
     this.loadPapers(this.pageSizeFrom, this.pageSizeTo);
     // do something with the new value
+  }
+
+  onHome() {
+    this.router.navigate(['/']);
   }
 
 }

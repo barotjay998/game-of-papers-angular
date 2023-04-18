@@ -81,6 +81,10 @@ export class ViewComponent implements OnInit {
     this.router.navigate(['/papers'])
   }
 
+  onHome() {
+    this.router.navigate(['/']);
+  }
+
   onDownload(event: any) {
     this.loadPdf()
   }

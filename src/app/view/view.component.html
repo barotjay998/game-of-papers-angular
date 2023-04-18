@@ -1,11 +1,30 @@
 <div class="container-fluid font-consolas pb-3">
     <div class="row mt-3">
-        <div class="col-md-3">
-            <a (click)="onBack($event)" class="btn btn-sm btn-secondary w-75 font-consolas"
-            style="color: white;"> 
-                <i class="fa fa-chevron-left"></i> 
+        <div class="col-md-12">
+
+            <!-- <a (click)="onBack($event)" 
+            class="btn btn-sm btn-secondary font-consolas"
+            style="color: white; width: 12rem;"> 
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i>
                 Back To Directory
-            </a>
+            </a> -->
+
+            <button
+            (click)="onBack($event)"
+            class="btn btn-sm btn-outline-dark font-consolas mr-1 mb-1"
+            style="width: 13rem;">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+                Back To Directory
+            </button>
+
+            <button
+            (click)="onHome()"
+            class="btn btn-sm btn-outline-dark font-consolas mr-1 mb-1"
+            style="width: 7rem;">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </button>
+
         </div>
     </div>
 </div>
@@ -86,8 +105,8 @@
 <div *ngIf="isRecommend || showRecommend" class="ag-theme-alpine" 
      style="margin-bottom: 8rem; 
             margin-top: 1rem; 
-            margin-right: 8rem; 
-            margin-left: 8rem;">
+            margin-right: 10%; 
+            margin-left: 10%;">
 
     <ag-grid-angular
         id="myGrid"

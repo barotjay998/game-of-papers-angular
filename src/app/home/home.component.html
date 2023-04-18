@@ -22,13 +22,58 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" style="margin-bottom: 5rem;">
                     <div class="col-md-12 font-consolas text-center">
-                        <a class="btn-explore" routerLink="/papers"> Start exploring <i class="fa fa-search"></i> </a>
+                        <a class="btn-explore" routerLink="/papers"> 
+                            <i class="fa-solid fa-book"></i>
+                            Papers Directory  
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="this.data?.length > 0" class="container mt-1" style="margin-bottom: 7rem;">
+                <div class="row font-consolas">
+                    <div class="col-md-12">
+                        <h2 class="text-left text-light"> Featured </h2>
                     </div>
                 </div>
 
-            </div>
+                <div class="row">
+
+                    <div class="col-lg-4 mt-2 mb-2" *ngFor="let paper of this.data;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{ paper.title }} </h5>
+                                <p class="card-text"> {{ paper.conference }} </p>
+
+                                <div class="text-center">
+
+                                    <a
+                                    (click)="onView(paper.id)"
+                                    class="btn btn-sm btn-secondary font-consolas mr-1"
+                                    style="color: white; width: 7rem;">
+                                        View <i class="fa-solid fa-eye" style="color: white"></i> 
+                                    </a>
+
+                                    <a 
+                                    (click)="onRecommend(paper.id)"
+                                    class="btn btn-sm btn-warning font-consolas"
+                                    style="width: 7rem;">
+                                        Recommend
+                                        <i class="fa fa-angle-double-right"></i> 
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>  
+
         </div>
     </div>
+
 </div>

@@ -21,10 +21,87 @@
                                         cat README.md
                                     </p>
                                     <p>
-                                        Welcome to Game of Papers
+                                        Welcome to Game of Papers - A reccomendation system for research papers.
                                     </p>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-12 font-consolas text-light">
+                                    <p class="mb-0" style="font-size: x-large;">Use our model using the transformer library</p>
+                                    <p style="color: #a4a2a2">Easiest way to get started with the model is using it with the transformers library</p>
+                                </div>
+                            </div>
+
+                            <div class="row" id="model-code-div">
+                                <div class="col-md-9 font-consolas text-light pt-2 text-warp"
+                                     style="background: #161b22; border-radius: 10px;">
+                                    <p>
+                                        <span class="code-pink">from </span>
+                                        <span class="code-green">transformers </span>
+                                        <span class="code-pink">import </span>
+                                        <span class="code-green">AutoTokenizer</span>,
+                                        <span class="code-green">AutoModel</span>
+                                    </p>
+                                    <p>
+                                        <span class="code-blue">tokenizer</span> = 
+                                        <span class="code-green">AutoTokenizer</span>.<span class="code-yellow">from_pretrained</span>
+                                        <span class="code-dark-yellow"> (</span>
+                                        <span class="code-red">"allenai / scibert_scivocab_uncased"</span>
+                                        <span class="code-dark-yellow">)</span>
+                                    </p>
+                                    <p>
+                                        <span class="code-blue">model</span> = 
+                                        <span class="code-green">AutoModel</span>.<span class="code-yellow">from_pretrained</span>
+                                        <span class="code-dark-yellow"> (</span>
+                                        <span class="code-red">"adit-negi / recommendor-bert"</span>
+                                        <span class="code-dark-yellow">)</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-12 font-consolas text-light">
+                                    <p class="mb-0" style="font-size: x-large;">Training the Model</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-1">
+                                <div class="col-md-12 text-center">
+                                    <img id="training-diagram" src="assets/images/model-train-diagram.png">
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-md-12 font-consolas text-light"
+                                style="font-size:small;">
+                                    <p>
+                                        Detailed information regarding installation, 
+                                        usage, testing the model against other models, using this project 
+                                        can be found on our github repository.
+                                    </p>
+                                    <p class="mb-1 ml-1">
+                                        <a href="">
+                                            https://github.com/adit-negi/GameOfPapers
+                                        </a>
+                                    </p>
+                                    <p class="mb-1 ml-1">
+                                        <a href="">
+                                            https://github.com/barotjay998/game-of-papers-angular
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 font-consolas text-light">
+                                    <p class="mb-0">
+                                        <span style="color:#1dff1d">$root@game-of-papers:</span>
+                                        <span class="blinkme" style="color:yellow ">|</span>
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>

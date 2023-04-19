@@ -47,3 +47,102 @@
   width: 48%;
   margin: 0;
 }
+
+/* Very Small devices (phones, 600px and up) */
+@media only screen and (min-width: 200px) {
+  #model-code-div {
+    padding-left: 0rem;
+  }
+}
+
+/* Small devices (phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #model-code-div {
+    padding-left: 2rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #model-code-div {
+    padding-left: 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #model-code-div {
+    padding-left: 3rem;
+  }
+}
+
+/* Very Small devices (phones, 600px and up) */
+@media only screen and (min-width: 200px) {
+  #training-diagram {
+    width:100%;
+  }
+}
+
+/* Small devices (phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #training-diagram {
+    width:100%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #training-diagram {
+    width:65%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #training-diagram {
+    width:50%;
+  }
+}
+
+.code-pink {
+  color: #c484bb
+}
+
+.code-green {
+  color: #43c4a5;;
+}
+
+.code-blue {
+  color: #81dcfe
+}
+
+.code-yellow {
+  color: #d6cb88;
+}
+
+.code-dark-yellow {
+  color: #e9cc07
+}
+
+.code-red {
+  color: #ce9178;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the paragraph */
+.blinkme {
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}

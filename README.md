@@ -15,6 +15,7 @@ https://www.gameofpapers.com
 ***Step 1:***
 Clone this GitHub repository
 
+### Installation
 ***Step 2:***
 Install NodeJS, 
 We developed using the version v18.16.0 (Latest LTS supported by angular)
@@ -38,6 +39,7 @@ npm install
 ```
 This command installs all the dependencies listed in the package.json file, including AG-Grid, and other required libraries.
 
+### Usage
 ***Step 6:***
 Run ng serve to start the development server:
 ```

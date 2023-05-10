@@ -1,8 +1,8 @@
 # Gameofpapers 
 ## Description
-This is the frontend side of our Machine Learning project called the Game of Papers. This project recommends papers based on our recommender BERT model. The frontend is developed using Angular. Angular is a popular open-source framework for building web applications. It is maintained by Google and is widely used for frontend development due to its many advantages like Cross-platform development, Component-based architecture, Data binding, Dependency Injection, Performance. More information can be found here https://angular.io/. 
+This is the frontend side of our Machine Learning project called the Game of Papers. This project recommends papers based on our recommender BERT model. The frontend is developed using Angular. Angular is a popular open-source framework for building web applications. It is maintained by Google and is widely used for frontend development due to its many advantages like Cross-platform development, Component-based architecture, Data binding, Dependency Injection, Performance. More information can be found here [Angular Home](https://angular.io/).
 
-One of our dependecies is Ag-Grid, a popular library that provides a powerful grid system for displaying and manipulating large amounts of data in web applications. It is designed to be highly customizable and scalable, with features like column sorting, filtering, grouping, and pagination. More information about that can be found here https://www.ag-grid.com/.
+One of our dependecies is Ag-Grid, a popular library that provides a powerful grid system for displaying and manipulating large amounts of data in web applications. It is designed to be highly customizable and scalable, with features like column sorting, filtering, grouping, and pagination. More information about that can be found here [AG-Grid Home](https://www.ag-grid.com/).
 
 ## Steps to run this code
 

@@ -26,15 +26,22 @@ npm install -g @angular/cli@13.2.6
 ```
 
 ### Step 5:
-Move inside the project root directory and run the following command to install all the dependencies:
+Move inside the project root directory and run the following command:
 ```
 npm install
 ```
+This command installs all the dependencies listed in the package.json file, including AG-Grid, and other required libraries.
 
 ### Step 6:
 Run ng serve to start the development server:
 ```
 ng serve
+```
+This command starts the development server and compiles the code. Once the compilation is complete, you should see a message similar to this:
+
+```
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+: Compiled successfully.
 ```
 
 ### Step 7:

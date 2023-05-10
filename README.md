@@ -46,3 +46,6 @@ This command starts the development server and compiles the code. Once the compi
 
 ### Step 7:
 Open your browser and navigate to ``` http://localhost:4200 ``` to view the application.
+
+### License
+This project is licensed under the MIT License - see the LICENSE file for details.

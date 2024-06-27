@@ -7,8 +7,9 @@ The frontend is developed using Angular. Angular is a popular open-source framew
 
 One of our dependecies is Ag-Grid, a popular library that provides a powerful grid system for displaying and manipulating large amounts of data in web applications. It is designed to be highly customizable and scalable, with features like column sorting, filtering, grouping, and pagination. More information about that can be found here [AG-Grid Home](https://www.ag-grid.com/).
 
-**Demo**
-https://www.gameofpapers.com
+
+## Watch the YouTube Video
+For a detailed walkthrough of the project, watch our YouTube video: [Game of Papers Demo](https://youtu.be/zpSTXFzWJPE)
 
 ## Steps to run this code
 
